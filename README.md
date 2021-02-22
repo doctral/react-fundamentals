@@ -1,5 +1,33 @@
 # react-fundamentals
 
+## Introducing JSX 
+1. JSX is a syntax extension to JavaScript. JSX produces React elements.
+2. JSX prevents injection attacks: By default, React DOM escapes any values embedded in JSX before rendering them. This helps prevent XSS attacks. 
+3. Babel compiles JSX down to React.createElement() calls. 
+
+## Rendering Elements
+1. React elements are **immutable**. Once you create an element, you can’t change its children or attributes.
+2. The only way to update the UI is to create a new element, and pass it to ReactDOM.render().
+3. In practice, most React apps only call ReactDOM.render() once. 
+4. React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.
+
+## Components and Props
+1. Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+2. Function Component vs Class Components
+    1. Function Component: a JavaScript function that accepts a single "props" object argument with data and returns a React element.  
+    2. Class Component: a class that extends React.Component using ES6
+3. Always start components names with a capital letter
+    1. React treats components starting with lowercase letters as DOM tags. For example, <div> represents an HTML div tag, but <Welcome> represents a component and requires Welcome to be in scope.
+4. **All React components must act like pure functions with respect to their props**.
+    1. **Props are Read-Only**.
+
+## State and Lifecycle
+1. The **componentDidMount()** method runs after the component output has been rendered to the DOM.
+2. If the component is ever removed from the DOM, React calls the **componentWillUnmount()** lifecycle method.
+3. Using State correctly:
+    1. Do Not Modify State Directly, instead, use **setState()**. The only place you can assign **this.state** is the constructor
+
+
 ## Immutability
 1. Immutability makes complex features much easier to implement.
     1. Avoiding direct data mutation lets us keep previous versions of the game’s history intact, and reuse them later.
