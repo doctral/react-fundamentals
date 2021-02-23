@@ -27,6 +27,10 @@
 3. Using State correctly:
     1. Do Not Modify State Directly, instead, use **setState()**. The only place you can assign **this.state** is the constructor
 
+## Handling Events
+1. React events are named using camelCase, rather than lowercase.
+2. With JSX you pass a function as the event handler, rather than a string.
+3. You cannot return false to prevent default behavior in React. You must call preventDefault explicitly.
 
 ## Immutability
 1. Immutability makes complex features much easier to implement.
