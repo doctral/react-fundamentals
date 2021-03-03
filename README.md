@@ -47,3 +47,4 @@
 1. **key** is a special and reserved property in React (along with ref, a more advanced feature). When an element is created, React extracts the key property and stores the key directly on the returned element. Even though key may look like it belongs in props, key cannot be referenced using this.props.key. React automatically uses key to decide which components to update. A component cannot inquire about its key.
 2. **It’s strongly recommended that you assign proper keys whenever you build dynamic lists.**
 3. If no key is specified, React will present a warning and use the array index as a key by default. Using the array index as a key is problematic when trying to re-order a list’s items or inserting/removing list items. Explicitly passing key={i} silences the warning but has the same problems as array indices and is not recommended in most cases.
+4. Keys used within arrays should be unique among their siblings. However they don’t need to be globally unique.
